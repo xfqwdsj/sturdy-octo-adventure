@@ -5,7 +5,7 @@ import 'mdui/dist/css/mdui.min.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className='.mdui-theme-layout-auto'>
+    <div className='mdui-theme-layout-auto'>
       <Head>
         <title>LTFan</title>
         <meta name='description' content="LTFan's home page." />

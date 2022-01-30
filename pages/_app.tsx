@@ -4,6 +4,14 @@ import type { AppProps } from 'next/app'
 import 'mdui/dist/css/mdui.min.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    document.body.classList.add('mdui-theme-layout-auto')
+
+    return () => {
+      document.body.classList.remove('mdui-theme-layout-auto')
+    }
+  })
+
   return (
     <div>
       <Head>

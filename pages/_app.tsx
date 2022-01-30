@@ -5,6 +5,12 @@ import type { AppProps } from 'next/app'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
+      <Head>
+        <title>LTFan</title>
+        <meta name="description" content="LTFan's home page." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Component {...pageProps} />
 
       <footer>

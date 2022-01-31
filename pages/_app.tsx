@@ -3,6 +3,7 @@ import Image from 'next/image'
 import type { AppProps } from 'next/app'
 import 'mdui/dist/css/mdui.min.css'
 import React, { useEffect } from 'react';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>LTFan</title>
         <meta name='description' content="LTFan's home page." />
         <link rel='icon' href='/favicon.ico' />
-        <script type='text/javascript' src='/node/modules/mdui/dist/js/mdui.min.js' />
+        <Script type='text/javascript' src='/node_modules/mdui/dist/js/mdui.min.js' />
       </Head>
 
       <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide'>

@@ -63,3 +63,17 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export const getStaticProps = () => {
+  return {
+    props: {
+      page: {
+        title: 'LTFan',
+        description: 'LTFan\'s home page.'
+      },
+      topBar: {
+        title: 'LTFan'
+      }
+    }
+  }
+}

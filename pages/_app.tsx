@@ -6,15 +6,19 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { CssBaseline } from '@mui/material';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
-        <title>LTFan</title>
-        <meta name='description' content="LTFan's home page." />
+        <title>{pageProps.page.title}</title>
+        <meta name='description' content={pageProps.page.description} />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <CssBaseline />
 
       <Component {...pageProps} />
 

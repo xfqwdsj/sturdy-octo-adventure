@@ -20,12 +20,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide'>
-        <div className='mdui-toolbar'>
+        <div className='mdui-toolbar mdui-color-white'>
           <span className='mdui-typo-title'>Title</span>
         </div>
-      </div>
 
-      <Component {...pageProps} />
+        <Component {...pageProps} />
+      </div>
 
       <footer>
         <a

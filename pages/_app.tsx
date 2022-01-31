@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide'>
+      <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide'>
         <div className='mdui-toolbar mdui-color-white'>
           <span className='mdui-typo-title'>Title</span>
         </div>

@@ -25,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
       </div>
 
-      <Component {...pageProps} />
+      <div className='mdui-container'>
+        <Component {...pageProps} />
+      </div>
 
       <footer>
         <a

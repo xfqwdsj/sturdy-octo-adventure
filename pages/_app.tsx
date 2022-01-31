@@ -23,9 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className='mdui-toolbar mdui-color-white'>
           <span className='mdui-typo-title'>Title</span>
         </div>
-
-        <Component {...pageProps} />
       </div>
+
+      <Component {...pageProps} />
 
       <footer>
         <a

@@ -18,8 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>LTFan</title>
         <meta name='description' content="LTFan's home page." />
         <link rel='icon' href='/favicon.ico' />
-        <Script type='text/javascript' src='/node_modules/mdui/dist/js/mdui.min.js' />
       </Head>
+
+      <Script type='text/javascript' src='/node_modules/mdui/dist/js/mdui.min.js' />
 
       <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide'>
         <div className='mdui-toolbar mdui-color-white'>

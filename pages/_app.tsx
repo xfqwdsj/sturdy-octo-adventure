@@ -12,12 +12,18 @@ function MyApp({ Component, pageProps }: AppProps) {
   })
 
   return (
-    <div>
+    <div className='mdui-appbar-with-toolbar'>
       <Head>
         <title>LTFan</title>
         <meta name='description' content="LTFan's home page." />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide'>
+        <div className='mdui-toolbar mdui-color-white'>
+          <span className='mdui-typo-title'>Title</span>
+        </div>
+      </div>
 
       <Component {...pageProps} />
 

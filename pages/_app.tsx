@@ -12,13 +12,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
-        <title>{pageProps.page.title}</title>
-        <meta name='description' content={pageProps.page.description} />
+        <title>{pageProps.page.title ??= 'LTFan'}</title>
+        <meta name='description' content={pageProps.page.description ??= 'LTFan\'s home page.'} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <CssBaseline />
+
+
 
       <Component {...pageProps} />
 

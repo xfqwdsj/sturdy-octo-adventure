@@ -6,11 +6,9 @@ import React, { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
+    document.body.classList.add('mdui-theme-primary-blue')
+    document.body.classList.add('mdui-theme-accent-blue')
     document.body.classList.add('mdui-theme-layout-auto')
-
-    return () => {
-      document.body.classList.remove('mdui-theme-layout-auto')
-    }
   })
 
   return (

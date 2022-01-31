@@ -1,36 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import type { AppProps } from 'next/app'
-import 'mdui/dist/css/mdui.min.css'
-import React, { useEffect } from 'react';
-import Script from 'next/script';
+import React from 'react';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    document.body.classList.add('mdui-theme-primary-blue')
-    document.body.classList.add('mdui-theme-accent-blue')
-    document.body.classList.add('mdui-theme-layout-auto')
-  })
-
   return (
-    <div className='mdui-appbar-with-toolbar'>
+    <div>
       <Head>
         <title>LTFan</title>
         <meta name='description' content="LTFan's home page." />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Script type='text/javascript' src='./node_modules/mdui/dist/js/mdui.min.js' />
-
-      <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide'>
-        <div className='mdui-toolbar mdui-color-white'>
-          <span className='mdui-typo-title'>Title</span>
-        </div>
-      </div>
-
-      <div className='mdui-container'>
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
 
       <footer>
         <a

@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import { HeadProps } from '../components/page/head'
+import MDXDocument, { metadata } from 'index.mdx'
 
 const head: HeadProps = {
   pageTitle: 'LTFan',
   pageDescription: 'LTFan\'s home page',
-  topBarTitle: 'LTFan'
+  topBarTitle: metadata.title
 }
 
 export function getStaticProps() {
@@ -17,10 +18,7 @@ export function getStaticProps() {
 
 const Home: NextPage = () => {
   return (
-    <>
-      <h2>你好！</h2>
-      <p>这是我未来的主页，欢迎关注本站更多动态！</p>
-    </>
+    <MDXDocument />
   )
 }
 

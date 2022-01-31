@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Script type='text/javascript' src='/node_modules/mdui/dist/js/mdui.min.js' />
+      <Script type='text/javascript' src='./node_modules/mdui/dist/js/mdui.min.js' />
 
       <div className='mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide'>
         <div className='mdui-toolbar mdui-color-white'>

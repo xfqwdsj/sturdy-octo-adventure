@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import type { AppProps } from 'next/app'
 import 'mdui/dist/css/mdui.min.css'
-import 'mdui/dist/js/mdui'
+import 'mdui'
 import React, { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {

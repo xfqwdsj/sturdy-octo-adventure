@@ -1,8 +1,9 @@
 import fs from 'fs';
 import { NextPage } from 'next';
-import dynamic from 'next/dynamic';
 import path from 'path';
-import React, { ReactNode } from 'react';
+import React from 'react';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 const dir = path.join(process.cwd(), 'pages_mdx');
 
@@ -24,8 +25,7 @@ interface MDXPageParams {
 }
 
 interface MDXPageProps {
-  file: string;
-  children?: ReactNode;
+  source: MDXRemoteSerializeResult;
 }
 
 export async function getStaticPaths() {
@@ -37,28 +37,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: MDXPageParams) {
+  const source = await serialize(fs.readFileSync(`${dir}/${params.file}.mdx`, 'utf8'))
   return {
     props: {
-      file: params.file,
-    },
-  };
+      source: source
+    }
+  }
 }
 
-const Page: NextPage<MDXPageProps> = ({ file }) => {
-  const path = `../pages_mdx/${file}.mdx`;
-  let component;
-
-  if (process.browser) {
-    const Component = dynamic(() => import(path));
-    component = <Component />;
-  } else {
-    const Component = require(path).default;
-    const DOMServer = require('react-dom/server');
-    const html = DOMServer.renderToString(<Component />) as string;
-    component = <div dangerouslySetInnerHTML={{ __html: html }} />;
-  }
-
-  return component;
+const Page: NextPage<MDXPageProps> = ({ source }) => {
+  return <MDXRemote {...source} />
 };
 
 export default Page;

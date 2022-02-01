@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import { HeadProps } from '../components/page/head';
-import Post from '../pages_mdx/test.mdx';
 
 const head: HeadProps = {
   pageTitle: 'LTFan',
@@ -19,7 +18,7 @@ export function getStaticProps() {
 const Home: NextPage = () => {
   return (
     <>
-      <Post />
+      
     </>
   );
 };

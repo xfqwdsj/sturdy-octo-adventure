@@ -45,13 +45,14 @@ export async function getStaticProps({ params }: MDXPageParams) {
 }
 
 const Page: NextPage<MDXPageProps> = ({ file }) => {
+  const path = `../pages_mdx/${file}.mdx`;
   let component;
 
   if (process.browser) {
-    const Component = dynamic(() => import(`${file}.mdx`));
+    const Component = dynamic(() => import(path));
     component = <Component />;
   } else {
-    const Component = require(`${file}.mdx`).default;
+    const Component = require(path).default;
     const DOMServer = require('react-dom/server');
     const html = DOMServer.renderToString(<Component />) as string;
     component = <div dangerouslySetInnerHTML={{ __html: html }} />;

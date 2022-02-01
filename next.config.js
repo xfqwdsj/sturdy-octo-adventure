@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-const withMDX = require("@next/mdx")({
+const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });
 

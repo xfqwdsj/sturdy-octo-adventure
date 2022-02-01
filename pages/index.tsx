@@ -1,11 +1,11 @@
-import type { NextPage } from "next";
-import { HeadProps } from "../components/page/head";
-import Post from "../pages_mdx/index.mdx";
+import type { NextPage } from 'next';
+import { HeadProps } from '../components/page/head';
+import Post from '../pages_mdx/index.mdx';
 
 const head: HeadProps = {
-  pageTitle: "LTFan",
+  pageTitle: 'LTFan',
   pageDescription: "LTFan's home page",
-  topBarTitle: "LTFan",
+  topBarTitle: 'LTFan',
 };
 
 export function getStaticProps() {

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { HeadProps } from '../components/page/head';
-import Post from '../pages_mdx/index.mdx';
+import Post from '../pages_mdx/test.mdx';
 
 const head: HeadProps = {
   pageTitle: 'LTFan',
